@@ -49,11 +49,369 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+@head-color: #e6ffe6;
+@background:  #d6f4cf;
+
+.flexbox {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+.flexbox2 {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+}
+
+.listX {
+	list-style-type:square;
+	font-size: 1rem;
+}
+
+/********above is variables and mixin ******/
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+ body {
+	width: 70%;
+	height: 100%;
+	border: 10px;
+	margin: auto;
+	padding: auto;
+	font-family: 'Guto', 'Roboto';
+	background: #fffeea;
+	font-size: 62.5%;
+	color: darkgray;
+} // end of body //
+
+h1, h2, h3, h4, h5 {
+    letter-spacing: 1px;
+		margin-bottom: 15px;
+		font-size: 1.5rem;
+} // end of h1-h5 //
+
+.container{
+	
+	.nav {
+		display: flex;
+  	flex-flow: row wrap;
+		justify-content: flex-end;
+		padding: 20px 10px;
+		border-radius: 20px;
+		color: #fffeea;
+		margin-bottom: 20px;
+		font-size: 1rem;
+	
+	 	a {
+	  	width: 100px;
+	  	height: 50px;
+	  	padding: 20px;
+    	color: #C0C0C0;
+			text-decoration: none;
+			border-radius: 20px;
+			margin-bottom: 20px;
+			justify-content: center;
+			text-align: center;
+			
+			&:hover{
+	  	background: #f5f5f5;
+   	 	color: lightgray;
+    	border-radius: 20px;
+			padding: 15px;
+			background: @background;
+			margin-bottom: 20px;
+			text-align: center;
+			justify-content: center;
+		
+			} // end of hoover //
+		}	// end of a //
+	} // end of nav //
+} // end of container //
+
+.box{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background: @background;
+	padding: 1rem;
+	
+		.image1 {
+			padding: 1rem;
+			text-align: center;
+
+			.notepad {
+				padding: .5rem;
+
+				h1 {
+					text-align: center;
+					padding: .5rem;
+				} // end of h1//
+			}	// end of image1 //
+		} // end of notepad //
+} // end of box //
+
+.box1 {
+	.flexbox();
+	padding: 2rem;
+	justify-content: center;
+	background-color: @background;
+
+	#about {
+			padding: .25rem;
+			
+		h1 {
+			font-size: 2rem;
+			text-align: center;
+			padding: .5rem;
+			}  // end of h1 //
+
+			.note {
+				font-size: 1.75rem;
+			} // end of note //
+	
+			p {
+				padding: .75rem;
+				margin: 1rem;
+				font-size: 1rem;
+				}	// end of p //
+
+			/*.button {
+				 display: inline-block;     
+  			 position: relative;   
+   			 padding: 0em;     
+   			 margin: -2em; 
+			} // end of .button //
+*/
+			button {
+				font-size: 1rem;
+				height: 2rem;
+				width: 10rem;
+				background-color: #f4f7f6;
+				border-radius: 12px;
+				box-shadow: 0 8px 12px 0 rgba(0,0,0,0.5),0 6px 16px 0 rgba(0,0,0,0);
+			}	// end of button //
+	} // end of about //
+} // end of box1 //
+
+hr {
+	margin-top: 1rem;
+} // end of hr //
+
+.box2 {
+		.flexbox();
+		justify-content: space-evenly;
+		align-items: baseline;
+
+		h2 {
+			padding: 1rem;
+			border-bottom: 3px solid lightgrey;
+			text-align: center;
+			width: 100%;
+			}  // end of h2 //
+	
+		.list {
+			font-size: .75rem;
+			padding: 2rem;
+			}  // end
+			
+			li {
+				padding: .5rem;
+			} // end of li //
+			
+			#summary {
+				.listX();
+				} // end of summary //
+
+				.fun {
+				border-bottom: 3px solid lightgrey;
+				text-align: center;
+				width: 100%;
+				} // end of fun //
+		
+				.list2 {
+					padding: 1rem;
+					border: 3px solid lightgray;
+					} // end of list2 //
+
+					#interests {
+						.listX();
+						padding: 1rem;
+					} // end of interests //				
+}  // end of box2 //
+			
+/*  ***************************** table ************************* */
+
+#ResponsiveTable {
+   width: 100%;
+   border-collapse: collapse;
+   color: darkgray;
+
+
+   tr:nth-of-type(odd) {
+      background: #fff5e1;
+	 }
+	 
+	 tr, th {
+		font-size: 1rem;
+		border: 1px solid darkgray;
+		padding: 10px 8px 0 8px;
+	}
+
+	th {
+		text-align: center;
+		padding-bottom: 5px;
+	}
+
+   #HeadRow {
+      background: @background;
+      color: #A9A9A9;
+			font-weight: bold;
+			text-align: center;
+	
+   }
+
+    td {
+			padding: 5px;
+      border: 1px groove lightgray;
+			text-align: center;
+			font-size: .90rem;
+   }
+} // END: #ResponsiveTable
+	
+	
+
+
+/*  ***************************** End of table ************************* */
+#contact {
+	font-size: 1rem;
+	padding: .1rem;
+	margin: 1rem;
+} // end of contact //
+
+.copyright {
+	display: flex;
+	justify-content: center;
+	font-size: 1rem;
+} // end of copyright //
+
+/*  ******************** 500px max-width   ************************* */
+
+@media screen and (max-width: 500px) {
+	
+body {
+	.flexbox2();
+	justify-content: center;
+	text-align: center;
 }
+
+.container .nav {
+	margin: 40px;
+	margin-bottom: 0;
+}
+.container .nav a{
+	border-bottom: 1px groove lightgray;
+	text-align: center;
+  width: 100%;
+}
+
+.box  {
+	display: none;
+}
+
+
+.box1 #about {
+	margin-left: -20px;
+	width: 90%;
+}
+
+.box1 #about h1  {
+	width: 50%;
+	margin-left: -20px;
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin-right: 200px;
+}
+
+.box1 #about .note {
+	font-size: 1.3rem;
+}
+
+button {
+	text-align: center;
+
+}
+
+.box2 {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 90%;
+	justify-content: center;
+	align-items: center;
+	margin-left: 15px;
+	padding: 10px;
+}
+
+  #summary li {
+	  border-bottom: 1px groove lightgray;
+	  padding: 2px;
+  }
+  li {
+	  margin: 1rem;
+  }
+
+  #history {
+		width: 80%;
+		margin-top: -60px;
+	  margin-left: 25px;
+	  align-items: center;
+	  padding: 10px;
+	}
+	
+	// BEG: CoolCat
+	  #ResponsiveTable,
+    #ResponsiveTable tbody,
+    #ResponsiveTable tr,
+    #ResponsiveTable td {
+        display: block;
+    }
+
+    #HeadRow {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+    }
+
+    #ResponsiveTable td {
+        position: relative;
+        padding-left: 40%;
+        white-space: normal;
+        text-align: left;
+    }
+
+    #ResponsiveTable td:before {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 40%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    #ResponsiveTable td:before {
+        content:attr(tableHeadData);
+    }
+	// END: CoolCat
+
+
+
+} // END: media
+
+
 
